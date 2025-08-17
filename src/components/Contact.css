@@ -301,7 +301,23 @@
 }
 
 .form-group select {
-  cursor: pointer;
+  cursor: none;
+}
+
+.form-group select option {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  padding: 8px 12px;
+}
+
+[data-theme="dark"] .form-group select option {
+  background: #1a1a2e;
+  color: #ffffff;
+}
+
+[data-theme="light"] .form-group select option {
+  background: #ffffff;
+  color: #1a1a2e;
 }
 
 .submit-btn {
@@ -312,7 +328,7 @@
   padding: 16px 32px;
   font-size: 1rem;
   font-weight: 600;
-  cursor: pointer;
+  cursor: none;
   transition: var(--transition);
   display: flex;
   align-items: center;

@@ -28,7 +28,42 @@ const Navigation = () => {
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <span className="logo-text">Mantex.me</span>
+          <svg className="logo-icon" viewBox="0 0 32 32" width="32" height="32">
+            <defs>
+              <linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style={{stopColor:"#ff6b6b", stopOpacity:1}} />
+                <stop offset="50%" style={{stopColor:"#4ecdc4", stopOpacity:1}} />
+                <stop offset="100%" style={{stopColor:"#45b7d1", stopOpacity:1}} />
+              </linearGradient>
+            </defs>
+            
+            <polygon points="16,3 26,9 26,23 16,29 6,23 6,9" fill="url(#navGrad)"/>
+            
+            <g fill="white" opacity="0.95">
+              <rect x="12" y="12" width="8" height="8" rx="1" ry="1"/>
+              
+              <rect x="8" y="14" width="4" height="1"/>
+              <rect x="20" y="14" width="4" height="1"/>
+              <rect x="8" y="16" width="4" height="1"/>
+              <rect x="20" y="16" width="4" height="1"/>
+              <rect x="8" y="18" width="4" height="1"/>
+              <rect x="20" y="18" width="4" height="1"/>
+              
+              <rect x="14" y="8" width="1" height="4"/>
+              <rect x="16" y="8" width="1" height="4"/>
+              <rect x="18" y="8" width="1" height="4"/>
+              <rect x="14" y="20" width="1" height="4"/>
+              <rect x="16" y="20" width="1" height="4"/>
+              <rect x="18" y="20" width="1" height="4"/>
+              
+              <circle cx="14" cy="14" r="0.8"/>
+              <circle cx="18" cy="14" r="0.8"/>
+              <circle cx="14" cy="18" r="0.8"/>
+              <circle cx="18" cy="18" r="0.8"/>
+              <circle cx="16" cy="16" r="1"/>
+            </g>
+          </svg>
+          <span className="logo-text">Mantex</span>
         </div>
         
         <div className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>

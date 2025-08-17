@@ -34,18 +34,14 @@ const Hero = () => {
             >
               View Projects
             </button>
-            <button 
-              className="btn btn-resume"
-              onClick={() => {
-                // Create a download link for resume
-                const link = document.createElement('a');
-                link.href = '/resume-manthan-gourshete.pdf';
-                link.download = 'Manthan_Gourshete_Resume.pdf';
-                link.click();
-              }}
-            >
-              📄 Download Resume
-            </button>
+            <button
+  className="btn btn-resume"
+  onClick={() => {
+    window.open("/RESUME.pdf", "_blank");
+  }}
+>
+  📄 View Resume
+</button>
           </div>
           
           <div className="hero-social-links">

@@ -33,16 +33,37 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitStatus('Message sent successfully! I\'ll get back to you soon.');
-      setIsSubmitting(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      // Clear success message after 5 seconds
-      setTimeout(() => setSubmitStatus(''), 5000);
-    }, 2000);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "166d7933-7528-49c4-929f-ef5f90f7ac4e", // 🔑 Replace with your key
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus("✅ Message sent successfully! I'll get back to you soon.");
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus("❌ Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setSubmitStatus("⚠️ Error sending message. Check your internet.");
+    }
+
+    setIsSubmitting(false);
+    setTimeout(() => setSubmitStatus(''), 5000); // Clear message after 5s
   };
 
   return (
@@ -54,11 +75,13 @@ const Contact = () => {
         </p>
         
         <div className="contact-content">
+          {/* CONTACT INFO SECTION */}
           <div className="contact-info-section">
             <div className="contact-cards">
+              {/* Email Card */}
               <div className="contact-card email-card">
                 <div className="contact-icon email-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg viewBox="0 0 24 24" fill="none">
                     <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <polyline points="22,6 12,13 2,6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
@@ -69,9 +92,10 @@ const Contact = () => {
                 </div>
               </div>
 
+              {/* Phone Card */}
               <div className="contact-card phone-card">
                 <div className="contact-icon phone-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg viewBox="0 0 24 24" fill="none">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
@@ -81,9 +105,10 @@ const Contact = () => {
                 </div>
               </div>
 
+              {/* Location Card */}
               <div className="contact-card location-card">
                 <div className="contact-icon location-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg viewBox="0 0 24 24" fill="none">
                     <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 5.02944 7.02944 1 12 1C16.9706 1 21 5.02944 21 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
@@ -95,6 +120,7 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Social Links */}
             <div className="social-links">
               <h3>Connect with me</h3>
               <div className="social-icons">
@@ -115,6 +141,7 @@ const Contact = () => {
             </div>
           </div>
 
+          {/* CONTACT FORM SECTION */}
           <div className="contact-form-section">
             <div className="form-container">
               <h3 className="form-title">Send me a message</h3>
@@ -198,7 +225,7 @@ const Contact = () => {
                   ) : (
                     <>
                       Send Message
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 24 24" fill="none">
                         <path d="M22 2L11 13L2 22L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         <path d="M22 2L15 22L11 13L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>

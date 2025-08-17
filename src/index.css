@@ -75,8 +75,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 12px;
+  height: 12px;
   background: var(--gradient-primary);
   border-radius: 50%;
   pointer-events: none;
@@ -84,10 +84,12 @@ body {
   mix-blend-mode: difference;
   transition: transform 0.1s ease;
   box-shadow: 
-    0 0 15px rgba(102, 126, 234, 0.8),
-    0 0 25px rgba(102, 126, 234, 0.6),
-    0 0 35px rgba(102, 126, 234, 0.4);
+    0 0 20px rgba(102, 126, 234, 1),
+    0 0 35px rgba(102, 126, 234, 0.8),
+    0 0 50px rgba(102, 126, 234, 0.6),
+    0 0 80px rgba(102, 126, 234, 0.4);
   animation: cursor-glow 2s ease-in-out infinite;
+  overflow: hidden;
 }
 
 .custom-cursor::before {
@@ -96,35 +98,74 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  border: 2px solid rgba(102, 126, 234, 0.3);
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(102, 126, 234, 0.4);
   border-radius: 50%;
   transition: all 0.2s ease;
 }
 
+.custom-cursor::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.8) 50%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  animation: glimmer 3s ease-in-out infinite;
+  opacity: 0.6;
+}
+
 .custom-cursor.hover {
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 
 .custom-cursor.hover::before {
-  width: 60px;
-  height: 60px;
-  border-color: rgba(102, 126, 234, 0.6);
+  width: 45px;
+  height: 45px;
+  border-color: rgba(102, 126, 234, 0.7);
+}
+
+.custom-cursor.hover::after {
+  animation-duration: 1.5s;
+  opacity: 0.8;
 }
 
 @keyframes cursor-glow {
   0%, 100% {
     box-shadow: 
-      0 0 15px rgba(102, 126, 234, 0.8),
-      0 0 25px rgba(102, 126, 234, 0.6),
-      0 0 35px rgba(102, 126, 234, 0.4);
+      0 0 20px rgba(102, 126, 234, 1),
+      0 0 35px rgba(102, 126, 234, 0.8),
+      0 0 50px rgba(102, 126, 234, 0.6),
+      0 0 80px rgba(102, 126, 234, 0.4);
   }
   50% {
     box-shadow: 
-      0 0 20px rgba(102, 126, 234, 1),
-      0 0 30px rgba(102, 126, 234, 0.8),
-      0 0 45px rgba(102, 126, 234, 0.6);
+      0 0 30px rgba(102, 126, 234, 1),
+      0 0 50px rgba(102, 126, 234, 0.9),
+      0 0 70px rgba(102, 126, 234, 0.8),
+      0 0 100px rgba(102, 126, 234, 0.6);
+  }
+}
+
+@keyframes glimmer {
+  0% {
+    transform: rotate(0deg) translate(-100%, -100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: rotate(360deg) translate(-100%, -100%);
+    opacity: 0;
   }
 }
 
@@ -257,7 +298,7 @@ body {
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
-  cursor: pointer;
+  cursor: none;
   transition: var(--transition);
   text-decoration: none;
   display: inline-flex;
@@ -280,28 +321,29 @@ body {
 }
 
 .btn-secondary {
-  background: var(--card-bg);
-  color: var(--text-primary);
-  border: 2px solid var(--card-border);
+  background: var(--gradient-secondary);
+  color: white;
+  border: 2px solid transparent;
   backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 25px rgba(240, 147, 251, 0.3);
 }
 
 .btn-secondary::before {
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 100%;
   height: 100%;
   background: var(--gradient-secondary);
-  transition: left 0.3s ease;
+  transition: all 0.3s ease;
   z-index: -1;
 }
 
 .btn-secondary:hover::before {
-  left: 0;
+  transform: scale(1.05);
 }
 
 .btn-secondary:hover {

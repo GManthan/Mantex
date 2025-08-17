@@ -115,7 +115,7 @@
   border-radius: 12px;
   padding: 1.5rem;
   transition: var(--transition);
-  cursor: pointer;
+  cursor: none;
   position: relative;
   overflow: hidden;
   animation: tech-card-fade-in 0.6s ease-out;

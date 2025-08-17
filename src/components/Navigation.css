@@ -40,6 +40,25 @@
   align-items: center;
 }
 
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: none;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  transition: var(--transition);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.nav-logo:hover .logo-icon {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2));
+}
+
 .nav-logo .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
@@ -90,7 +109,7 @@
   color: var(--text-secondary);
   font-size: 1rem;
   font-weight: 500;
-  cursor: pointer;
+  cursor: none;
   transition: var(--transition);
   position: relative;
   padding: 8px 0;
@@ -126,7 +145,7 @@
   align-items: center;
   justify-content: center;
   color: var(--text-secondary);
-  cursor: pointer;
+  cursor: none;
   transition: var(--transition);
   margin-left: 1rem;
 }
@@ -148,7 +167,7 @@
   flex-direction: column;
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: none;
   padding: 5px;
   gap: 4px;
 }

@@ -106,7 +106,7 @@
   transition: var(--transition);
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: none;
   text-align: left;
   padding: 0;
 }
@@ -181,7 +181,7 @@
   padding: 12px 24px;
   font-size: 0.95rem;
   font-weight: 600;
-  cursor: pointer;
+  cursor: none;
   transition: var(--transition);
   display: inline-flex;
   align-items: center;
