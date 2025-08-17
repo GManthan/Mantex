@@ -51,20 +51,17 @@ const Skills = () => {
     {
       title: "IoT Systems Integration",
       organization: "Acmegrade",
-      duration: "4 months",
-      icon: "🔗"
+      duration: "4 months"
     },
     {
       title: "Embedded Systems Development",
       organization: "Indo German Tool Room",
-      duration: "2 months",
-      icon: "🔧"
+      duration: "2 months"
     },
     {
       title: "Industrial Automation",
       organization: "Schneider Electric",
-      duration: "Certified",
-      icon: "⚙️"
+      duration: "Certified"
     }
   ];
 
@@ -111,20 +108,15 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Modern Certifications */}
+        {/* Compact Certifications */}
         <div className="certifications-minimal">
           <h3 className="cert-title-minimal">Certifications</h3>
           <div className="cert-grid-minimal">
             {certifications.map((cert, index) => (
               <div key={index} className="cert-minimal">
-                <div className="cert-header">
-                  <div className="cert-icon">{cert.icon}</div>
-                  <div className="cert-info">
-                    <h4 className="cert-name-minimal">{cert.title}</h4>
-                    <p className="cert-org-minimal">{cert.organization}</p>
-                    <span className="cert-duration-minimal">{cert.duration}</span>
-                  </div>
-                </div>
+                <span className="cert-name-minimal">{cert.title}</span>
+                <span className="cert-org-minimal">{cert.organization}</span>
+                <span className="cert-duration-minimal">{cert.duration}</span>
               </div>
             ))}
           </div>

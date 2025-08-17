@@ -73,7 +73,6 @@ const Projects = () => {
           {projects.map((project) => (
             <div key={project.id} className="project-card">
               <div className="project-header">
-                <div className="project-icon">{project.icon}</div>
                 <div className="project-meta">
                   <span className="project-category">{project.category}</span>
                   <h3 className="project-title">{project.title}</h3>
