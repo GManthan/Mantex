@@ -5,26 +5,26 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      icon: "💻",
+      icon: "⚡",
       color: "var(--gradient-primary)",
       skills: [
-        { name: "C", icon: "🔧", proficiency: "Expert" },
+        { name: "C", icon: "🔵", proficiency: "Expert" },
         { name: "Python", icon: "🐍", proficiency: "Intermediate" },
-        { name: "Java", icon: "☕", proficiency: "Intermediate" },
-        { name: "MATLAB", icon: "📊", proficiency: "Intermediate" },
-        { name: "JavaScript", icon: "🌐", proficiency: "Advanced" }
+        { name: "Java", icon: "⚪", proficiency: "Intermediate" },
+        { name: "MATLAB", icon: "📈", proficiency: "Intermediate" },
+        { name: "JavaScript", icon: "🟨", proficiency: "Advanced" }
       ]
     },
     {
       title: "Embedded Systems",
-      icon: "🤖",
+      icon: "🔧",
       color: "var(--gradient-accent)",
       skills: [
-        { name: "Arduino", icon: "🔌", proficiency: "Expert" },
-        { name: "Raspberry Pi", icon: "🥧", proficiency: "Intermediate" },
-        { name: "LPC2148", icon: "💾", proficiency: "Intermediate" },
-        { name: "IoT (NodeMCU, ESP8266)", icon: "📡", proficiency: "Expert" },
-        { name: "RTOS", icon: "⚙️", proficiency: "Intermediate" }
+        { name: "Arduino", icon: "🟦", proficiency: "Expert" },
+        { name: "Raspberry Pi", icon: "🍓", proficiency: "Intermediate" },
+        { name: "LPC2148", icon: "🔲", proficiency: "Intermediate" },
+        { name: "IoT (NodeMCU, ESP8266)", icon: "🌐", proficiency: "Expert" },
+        { name: "RTOS", icon: "⏱️", proficiency: "Intermediate" }
       ]
     },
     {
@@ -33,10 +33,10 @@ const Skills = () => {
       color: "var(--gradient-secondary)",
       skills: [
         { name: "Computer Vision (OpenCV)", icon: "👁️", proficiency: "Intermediate" },
-        { name: "Scikit-learn", icon: "🔍", proficiency: "Intermediate" },
+        { name: "Scikit-learn", icon: "🔬", proficiency: "Intermediate" },
         { name: "Python AI Libraries", icon: "🐍", proficiency: "Intermediate" },
         { name: "Machine Learning", icon: "🤖", proficiency: "Intermediate" },
-        { name: "Data Analysis", icon: "📈", proficiency: "Intermediate" }
+        { name: "Data Analysis", icon: "📊", proficiency: "Intermediate" }
       ]
     },
     {
@@ -44,21 +44,21 @@ const Skills = () => {
       icon: "🛠️",
       color: "var(--gradient-success)",
       skills: [
-        { name: "Data Structures & Algorithms", icon: "🏗️", proficiency: "Intermediate" },
-        { name: "Git", icon: "🌿", proficiency: "Expert" },
-        { name: "OS Concepts", icon: "💿", proficiency: "Advanced" },
+        { name: "Data Structures & Algorithms", icon: "🔗", proficiency: "Intermediate" },
+        { name: "Git", icon: "🔀", proficiency: "Expert" },
+        { name: "OS Concepts", icon: "💻", proficiency: "Advanced" },
         { name: "System Design", icon: "🏛️", proficiency: "Intermediate" },
         { name: "Problem Solving", icon: "🧩", proficiency: "Expert" }
       ]
     },
     {
       title: "Web Development",
-      icon: "🌍",
+      icon: "🌐",
       color: "var(--gradient-primary)",
       skills: [
-        { name: "HTML", icon: "📄", proficiency: "Expert" },
+        { name: "HTML", icon: "🔷", proficiency: "Expert" },
         { name: "CSS", icon: "🎨", proficiency: "Expert" },
-        { name: "JavaScript", icon: "⚡", proficiency: "Advanced" },
+        { name: "JavaScript", icon: "🟨", proficiency: "Advanced" },
         { name: "React", icon: "⚛️", proficiency: "Advanced" },
         { name: "Responsive Design", icon: "📱", proficiency: "Expert" }
       ]
@@ -70,7 +70,7 @@ const Skills = () => {
       title: "IoT Systems Integration",
       organization: "Acmegrade",
       duration: "4 months",
-      icon: "📡",
+      icon: "🔗",
       link: "#"
     },
     {
@@ -84,7 +84,7 @@ const Skills = () => {
       title: "Industrial Automation Training",
       organization: "Schneider Electric India Foundation",
       duration: "Completed",
-      icon: "⚙️",
+      icon: "🔧",
       link: "#"
     }
   ];

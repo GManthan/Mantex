@@ -40,7 +40,7 @@ const Hero = () => {
     window.open("/RESUME.pdf", "_blank");
   }}
 >
-  📄 View Resume
+  📋 View Resume
 </button>
           </div>
           
@@ -107,11 +107,11 @@ const Hero = () => {
                   <div className="circuit-line"></div>
                 </div>
                 <div className="robot-icon">🤖</div>
-                <div className="microchip">⚡</div>
+                <div className="microchip">🔌</div>
                 <div className="python-logo">🐍</div>
                 <div className="react-logo">⚛️</div>
-                <div className="iot-sensor">📡</div>
-                <div className="arduino-board">🔧</div>
+                <div className="iot-sensor">🌐</div>
+                <div className="arduino-board">🟦</div>
                 <div className="ml-brain">🧠</div>
                 <div className="code-bracket">{`{}`}</div>
                 <div className="wifi-signal">📶</div>

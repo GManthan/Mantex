@@ -6,6 +6,8 @@ const Projects = () => {
     {
       id: 1,
       title: "AI Video Analytics Dashboard",
+      icon: "👁️",
+      category: "Computer Vision",
       description: "Real-time video analysis system with computer vision capabilities for intelligent monitoring and analytics.",
       technologies: ["Python", "OpenCV", "React", "Computer Vision"],
       features: [
@@ -18,6 +20,8 @@ const Projects = () => {
     {
       id: 2,
       title: "Pinchit AI",
+      icon: "🤖",
+      category: "AI/ML",
       description: "Gesture control system achieving 90% accuracy for hands-free device interaction using computer vision.",
       technologies: ["Arduino", "Python", "OpenCV", "Machine Learning"],
       features: [
@@ -30,6 +34,8 @@ const Projects = () => {
     {
       id: 3,
       title: "Footstep Power Generator",
+      icon: "⚡",
+      category: "IoT/Hardware",
       description: "Energy harvesting prototype using piezoelectric technology to generate power from human footsteps.",
       technologies: ["Arduino", "Piezoelectric Sensors", "Energy Systems"],
       features: [
@@ -42,6 +48,8 @@ const Projects = () => {
     {
       id: 4,
       title: "AI Integrated Sign Language",
+      icon: "🤝",
+      category: "Assistive Tech",
       description: "Real-time gesture translation system for sign language communication using flex sensors and AI.",
       technologies: ["Arduino", "Flex Sensors", "AI/ML", "Communication Systems"],
       features: [
@@ -65,7 +73,11 @@ const Projects = () => {
           {projects.map((project) => (
             <div key={project.id} className="project-card">
               <div className="project-header">
-                <h3 className="project-title">{project.title}</h3>
+                <div className="project-icon">{project.icon}</div>
+                <div className="project-meta">
+                  <span className="project-category">{project.category}</span>
+                  <h3 className="project-title">{project.title}</h3>
+                </div>
               </div>
               
               <div className="project-content">

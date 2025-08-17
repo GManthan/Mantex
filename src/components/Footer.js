@@ -72,8 +72,8 @@ const Footer = () => {
                 Building tomorrow's technology with passion, precision, and purpose.
               </p>
               <div className="footer-contact">
-                <p>📧 manthancg23@gmail.com</p>
-                <p>📱 +91 7020406293</p>
+                <p>✉️ manthancg23@gmail.com</p>
+                <p>📞 +91 7020406293</p>
                 <p>📍 Aurangabad, Maharashtra</p>
               </div>
             </div>

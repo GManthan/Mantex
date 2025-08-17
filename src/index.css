@@ -169,6 +169,13 @@ body {
   }
 }
 
+/* Hide custom cursor on mobile and tablet devices */
+@media (max-width: 1024px) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
+
 [data-theme="dark"] body::before {
   content: '';
   position: fixed;

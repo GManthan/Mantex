@@ -98,7 +98,7 @@ const About = () => {
             <h4 className="timeline-category">🏆 Leadership & Achievements</h4>
             <div className="achievements-grid">
               <div className="achievement-card">
-                <div className="achievement-icon">👑</div>
+                <div className="achievement-icon">👨‍💼</div>
                 <h4>IETE DIEMS Chairperson</h4>
                 <p>Leading technical society activities and organizing tech events</p>
               </div>
@@ -118,7 +118,7 @@ const About = () => {
                 <p>Bronze Medal in technical innovation competition</p>
               </div>
               <div className="achievement-card">
-                <div className="achievement-icon">🏀</div>
+                <div className="achievement-icon">⛹️</div>
                 <h4>National Basketball Player</h4>
                 <p>Representing state in national level basketball championships</p>
               </div>
