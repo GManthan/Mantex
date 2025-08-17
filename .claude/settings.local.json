@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm start)",
+      "Bash(npm run build:*)",
+      "Bash(npx eslint:*)",
+      "Bash(npm uninstall:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
